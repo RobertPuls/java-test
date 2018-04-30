@@ -25,7 +25,7 @@ public class DemoServlet extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest req, HttpServletResponse resp)
       throws IOException {
-        System.out.println(req.getParameter("searchterm"));
+        System.out.println(req.getQueryString());
     resp.setContentType("text/plain");
     resp.getWriter().println("{ \"name\": \"World\" }");
   }
